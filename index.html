@@ -106,39 +106,41 @@
         </div>
 
       </div>
-      <label for="houses">House type</label>
+      <!-- <label for="houses">House type</label>
       <select id="houses">
         <option value="mansion">Mansion</option>
         <option value="shanty">Shanty</option>
         <option value="apartment">Apartment</option>
         <option value="cardboard-box">Cardboard Box</option>
-      </select><br>
-  
-      <label for="furnishing">Furnishing</label>
-      <select id="furnishing">
+      </select><br> -->
+       <h5>Furnishing:</h2>
+      <label for="couch">Couches</label>
+      <select id="couch">
         <option value="none">None</option>
-        <option value="essentials">Essentials</option>
+        <option value="standard">Standard</option>
         <option value="extra">Extra</option>
         <option value="lavish">Lavish</option>
       </select><br>
+      <label for="couch_num">Number of Couches</label>
+      <input type="number" id="couch_num"><br>
   
+      <h5>Flooring:</h5>
       <label for="sqft">Square feet</label>
       <input type="number" id="sqft"><br>
-  
-      <label for="flooring">Flooring</label>
+      <label for="flooring">Flooring Type</label>
       <select id="flooring">
         <option value="none">None</option>
         <option value="hardwood">Hardwood</option>
         <option value="carpet">Carpet</option>
       </select><br>
   
-      Low or High Estimate?<br>
+      <h5>Low or High Estimate?</h5>
       <label for="low">Low</label>
       <input type="radio" id = "low" name="low-or-high" checked>
       <label for="high">High</label>
       <input type="radio" id = "high" name="low-or-high">
   
-      <p id="estimate"></p>
+      <h4 id="estimate"></h4>
       <script src="assets/js/estimator.js"></script>
     </section><!-- End About Us Section -->
 

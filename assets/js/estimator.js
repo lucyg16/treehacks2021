@@ -9,6 +9,8 @@ select("houses").onchange = function() {writeEstimate(updateCost())}
 select("furnishing").onchange = function() {writeEstimate(updateCost())}
 select("sqft").onchange = function() {writeEstimate(updateCost())}
 select("flooring").onchange = function() {writeEstimate(updateCost())}
+select("low").onchange = function() {writeEstimate(updateCost())}
+select("high").onchange = function() {writeEstimate(updateCost())}
 // select("houses").onchange = function() {writeEstimate(updateCost())}
 
 

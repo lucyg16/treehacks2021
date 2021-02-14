@@ -2,40 +2,25 @@
 function select(id) {
     return document.getElementById(id)
 }
-select("estimate").innerHTML = "Hello world!";
+select("estimate").innerHTML = "Enter data for an estimate...";
 
 
 select("houses").onchange = function() {writeEstimate(updateCost())}
-select("furnishings").onchange = function() {writeEstimate(updateCost())}
+select("furnishing").onchange = function() {writeEstimate(updateCost())}
+select("sqft").onchange = function() {writeEstimate(updateCost())}
+select("flooring").onchange = function() {writeEstimate(updateCost())}
 // select("houses").onchange = function() {writeEstimate(updateCost())}
 
+
+const houses = [50, 500, 5000, 20000];
+const furnishing = [0, 500, 5000, 40000];
+const flooring = [0, 5, 20];
+
 function updateCost() {
-    let total = 0
-    switch(select("houses").selectedIndex) {
-        case 0:
-            total += 50;
-            break;
-        case 1:
-            total += 500;
-            break;
-        case 2:
-            total += 5000;
-            break;
-        case 3:
-            total += 20000;
-    }
-    switch(select("furnishing").selectedIndex) {
-        case 0:
-            break;
-        case 1:
-            total += 500;
-            break;
-        case 2:
-            total += 5000;
-            break;
-        case 3:
-            total += 40000;
-    }
+    let total = 0;
+    total += houses[select("houses").selectedIndex];
+    total += furnishing[select("furnishing").selectedIndex];
+    total += select("sqft").value * flooring[select("flooring").selectedIndex];
     return total;
 }
 
